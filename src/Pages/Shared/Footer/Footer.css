@@ -1,0 +1,43 @@
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    color: white;
+}
+
+.footer-container {
+    text-align: center;
+}
+
+.footer-title {
+    padding-top: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    font-size: 30px;
+    margin-left: 10px;
+    color: coral;
+}
+
+.footer-link {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon-link {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer-icon-link:hover {
+    color: coral;
+}
