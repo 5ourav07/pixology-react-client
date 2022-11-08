@@ -4,7 +4,7 @@ import Slider2 from '../../Assets/Slider/Macro.jpg';
 import Slider3 from '../../Assets/Slider/Underwater.jpg';
 import Slider4 from '../../Assets/Slider/Wildlife.jpg';
 
-function Slider() {
+const Slider = () => {
     return (
         <Carousel>
             <Carousel.Item>
