@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home";
+import ServiceDetails from "../Pages/Services/ServiceDetails";
 import Services from "../Pages/Services/Services";
 
 export const routes = createBrowserRouter([
@@ -15,6 +16,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>
+            },
+            {
+                path: '/services/:id',
+                element: <ServiceDetails></ServiceDetails>
             }
         ]
     }

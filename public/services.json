@@ -1,6 +1,5 @@
 [
     {
-        "_id": "635a0c0b64a6d231228942ae",
         "service_id": "01",
         "title": "Wildlife Photography",
         "img": "https://photographylife.com/wp-content/uploads/2018/02/Puffin-Photo-960x640.jpg",
@@ -8,7 +7,6 @@
         "description": "Wildlife photography can bring out some of the most intense photographers you will meet people who might spend hours on end waiting for an animal to wander into the perfect spot, or search for creatures that most people would rather try to avoid. But it is also something you can practice in your own backyard, or a short drive from where you live, since there are animals to be found everywhere. From time to time, you will see a photo series of urban wildlife that rivals the best images captured in more remote locations."
     },
     {
-        "_id": "635a0c0b64a6d231228942af",
         "service_id": "02",
         "title": "Macro Photography",
         "img": "https://photographylife.com/wp-content/uploads/2017/09/Macro-photography-focusing-960x640.jpg",
@@ -16,7 +14,6 @@
         "description": "One of the most accessible types of photography is macro, the art of capturing small creatures and objects that we ordinarily overlook. Macro photography is usually associated with images of bugs and flowers, but even subjects like snowflakes or water droplets in the studio can make for amazing macro photos. A related style of photography is simply “close-up” photography, which might not be as magnified as true macro work, but still isolates a small slice of the world that otherwise may not stand out.Although a dedicated macro lens can be expensive, a set of extension tubes is much cheaper and likely works just fine with your current equipment. For photographers who only ever take pictures when they travel, my top recommendation is to start practicing macro photography one way or another. It is not easy to master, but you will learn some very useful technical skills and take some stellar photos along the way."
     },
     {
-        "_id": "635b591a1dafe382a9da8c96",
         "service_id": "03",
         "title": "Underwater Photography",
         "img": "https://photographylife.com/wp-content/uploads/2018/03/Some-noise-at-high-ISO-960x640.jpg",
@@ -24,7 +21,6 @@
         "description": "It is not always easy to take underwater photos, even if you live in the right location for it. Not only do you need a good waterproof camera, but you also need some specific lighting equipment the moment you start taking photos more than a short distance from the surface. Add in scuba gear and the requisite training for longer dives, and you can see why this is one of the trickier genres to start practicing. But if you put in the money and effort, you will end up with photos that not nearly as many people are taking today. Underwater photography spans everything from wildlife and macro to portraits that are striking to the eye."
     },
     {
-        "_id": "635b5afc1dafe382a9da8c98",
         "service_id": "04",
         "title": "Astrophotography",
         "img": "https://photographylife.com/wp-content/uploads/2021/11/Andromeda-Galaxy-Photo-960x640.jpg",
@@ -32,7 +28,6 @@
         "description": "Space not always easy to take underwater photos, even if you live in the right location for it. from the Hubble, astrophotography can be one of the most humbling types of photography to practice. It is humbling for two reasons: First, the size and scale of subjects captured in this style of photography are enough to bring on existential awe in almost anyone. But more to the point, if you do not have excellent exposure and post-processing techniques, any lack of knowledge will be immediately obvious."
     },
     {
-        "_id": "635b5b691dafe382a9da8c99",
         "service_id": "05",
         "title": "Wedding Photography",
         "img": "https://photographylife.com/wp-content/uploads/2010/09/Nikon-85mm-f1.4G-Image-Sample-31-960x641.jpg",
@@ -40,7 +35,6 @@
         "description": "Wedding not always easy to take underwater photos, even if you live in the right location for it. responsibility. Not only do wedding photographers need to have good camera and lighting skills, but they also must know how to work with people and capture the right emotions almost effortlessly. This is a difficult type of photography to practice, and you only get one chance to do it right, so I have a lot of respect for good wedding photographers."
     },
     {
-        "_id": "635b5ba51dafe382a9da8c9a",
         "service_id": "06",
         "title": "Event Photography",
         "img": "https://photographylife.com/wp-content/uploads/2019/01/Van-Halen-World-Tour-2012-960x639.jpeg",

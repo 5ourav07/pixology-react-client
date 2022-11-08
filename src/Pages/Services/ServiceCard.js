@@ -3,9 +3,10 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
-    const { title, img, price, description } = service;
+    const { _id, title, img, price, description } = service;
 
     return (
         <div>
@@ -29,7 +30,9 @@ const ServiceCard = ({ service }) => {
                             }
                         </Card.Text>
                         <Card.Text className='text-danger fw-bolder'>Price: ${price}</Card.Text>
-                        <Button className='w-100' variant="dark">Details</Button>
+                        <Link to={`/services/${_id}`}>
+                            <Button className='w-100' variant="dark">Details</Button>
+                        </Link>
                     </Card.Body>
                 </Card>
             </CardGroup>
