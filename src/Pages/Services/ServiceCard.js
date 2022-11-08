@@ -22,7 +22,7 @@ const ServiceCard = ({ service }) => {
                                     description
                             }
                         </Card.Text>
-                        <Card.Text>Price: ${price}</Card.Text>
+                        <Card.Text className='text-danger fw-bolder'>Price: ${price}</Card.Text>
                         <Button className='w-100' variant="dark">Details</Button>
                     </Card.Body>
                 </Card>

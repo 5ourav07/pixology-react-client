@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -12,8 +10,9 @@ const Services = () => {
     }, [])
 
     return (
-        <div>
-            <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-3 gy-4 mt-0'>
+        <div className='container mb-4'>
+            <h1 className='text-center'>My Services</h1>
+            <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-3 gy-3 mt-0'>
                 {
                     services.map(service => <ServiceCard
                         key={service._id}
@@ -21,9 +20,6 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <Link className='d-flex justify-content-center align-items-center mt-3'>
-                <Button variant="primary">See All</Button>
-            </Link>
         </div>
     );
 }

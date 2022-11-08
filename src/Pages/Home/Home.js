@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Slider from './Slider';
 import Services from '../Services/Services';
 import './Home.css';
+import Coffee from '../Coffee/Coffee';
+import { Button } from 'react-bootstrap';
 
 const Home = () => {
     return (
@@ -22,8 +24,14 @@ const Home = () => {
             </div>
 
             <div className='mb-4'>
-                <h1 className='text-center'>My Services</h1>
                 <Services></Services>
+                <Link to='/services' className='d-flex justify-content-center align-items-center mt-3'>
+                    <Button variant="primary">See All</Button>
+                </Link>
+            </div>
+
+            <div className='mb-4'>
+                <Coffee></Coffee>
             </div>
         </div>
     );
