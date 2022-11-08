@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceCard = ({ service }) => {
     const { title, img, price, description } = service;
@@ -10,7 +11,12 @@ const ServiceCard = ({ service }) => {
         <div>
             <CardGroup>
                 <Card>
-                    <Card.Img variant="top" src={img} />
+                    <PhotoProvider>
+                        <PhotoView src={img}>
+                            <img src={img} alt="" />
+                        </PhotoView>
+                    </PhotoProvider>
+
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text className='text-justify'>
