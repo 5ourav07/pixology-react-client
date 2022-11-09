@@ -38,13 +38,13 @@ const Header = () => {
                                 user?.uid
                                     ?
                                     <>
-                                        <Nav.Link href="/my-service">My Service</Nav.Link>
+                                        <Nav.Link href="/my-service">Add Service</Nav.Link>
                                         <Nav.Link href="/my-review">My Review</Nav.Link>
                                     </>
                                     :
                                     <>
                                         <div className='d-none'>
-                                            <Nav.Link href="/my-service">My Service</Nav.Link>
+                                            <Nav.Link href="/my-service">Add Service</Nav.Link>
                                             <Nav.Link href="/my-review">My Review</Nav.Link>
                                         </div>
                                     </>
