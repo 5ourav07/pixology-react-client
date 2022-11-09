@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const FirebaseConfig = {
-    apiKey: "AIzaSyBt4BnrpSonH1Vaw6fxezCzWzrXqvqzbBE",
-    authDomain: "pixology-firebase.firebaseapp.com",
-    projectId: "pixology-firebase",
-    storageBucket: "pixology-firebase.appspot.com",
-    messagingSenderId: "699790958826",
-    appId: "1:699790958826:web:30fd928daee3be8e92f793"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
