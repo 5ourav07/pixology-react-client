@@ -39,13 +39,13 @@ const Header = () => {
                                     ?
                                     <>
                                         <Nav.Link href="/my-service">Add Service</Nav.Link>
-                                        <Nav.Link href="/my-review">My Review</Nav.Link>
+                                        <Nav.Link href="/review">My Review</Nav.Link>
                                     </>
                                     :
                                     <>
                                         <div className='d-none'>
                                             <Nav.Link href="/my-service">Add Service</Nav.Link>
-                                            <Nav.Link href="/my-review">My Review</Nav.Link>
+                                            <Nav.Link href="/review">My Review</Nav.Link>
                                         </div>
                                     </>
                             }
