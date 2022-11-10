@@ -20,7 +20,7 @@ const MyReviewTable = ({ r, handleDelete }) => {
             </td>
             <td>
                 <Button onClick={() => handleDelete(_id)} variant='dark' className='me-2'>Delete</Button>
-                <Button variant='dark'>Update</Button>
+                <Button variant='dark'>Edit</Button>
             </td>
         </tr>
     );

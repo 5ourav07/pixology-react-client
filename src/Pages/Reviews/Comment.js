@@ -23,7 +23,8 @@ const Comment = () => {
             reviewerImage: img,
             reviewerName: name,
             reviewerEmail: email,
-            comment: comment
+            comment: comment,
+            timestamp: new Date()
         }
 
         fetch('http://localhost:5000/review', {
