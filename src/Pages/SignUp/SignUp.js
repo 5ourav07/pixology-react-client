@@ -4,8 +4,11 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../Hooks/useTitle';
 
 const SignUp = () => {
+    useTitle('Sign Up');
+
     const { googleSignup } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();

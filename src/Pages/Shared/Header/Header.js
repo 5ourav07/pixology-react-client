@@ -32,7 +32,7 @@ const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/services">Services</Nav.Link>
-                        <Nav.Link href="#">Blog</Nav.Link>
+                        <Nav.Link href="/blogs">Blog</Nav.Link>
                         <>
                             {
                                 user?.uid

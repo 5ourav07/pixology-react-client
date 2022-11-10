@@ -2,12 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
     const [error, setError] = useState('');
     const { signup, setLoading } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Login');
 
     const from = location.state?.from?.pathname || '/';
 
@@ -21,10 +23,27 @@ const Login = () => {
         signup(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
-                form.reset();
-                setError('');
-                navigate(from, { replace: true });
+
+                const currentUser = {
+                    email: user.email
+                }
+
+                // get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('pixology', data.token);
+                        form.reset();
+                        setError('');
+                        navigate(from, { replace: true });
+                    });
             })
             .catch(error => {
                 console.error(error);

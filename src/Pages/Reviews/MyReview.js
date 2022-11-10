@@ -1,17 +1,30 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 import MyReviewTable from './MyReviewTable';
 
 const MyReview = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [review, setReview] = useState([])
+    useTitle('My Review');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setReview(data))
-    }, [user?.email])
+        fetch(`http://localhost:5000/review?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('pixology')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut();
+                }
+                return res.json();
+            })
+            .then(data => {
+                setReview(data);
+            })
+    }, [user?.email, logOut])
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this comment?');

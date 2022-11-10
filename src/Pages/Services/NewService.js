@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import useTitle from '../../Hooks/useTitle';
 
 const NewService = () => {
     const [service, setService] = useState({});
+    useTitle('New Service');
 
     const handleAddService = event => {
         event.preventDefault();

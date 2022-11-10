@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from './Slider';
-import Services from '../Services/Services';
-import './Home.css';
-import Coffee from '../Coffee/Coffee';
 import { Button } from 'react-bootstrap';
+import ReverseServices from '../Services/ReverseServices';
+import './Home.css';
+import Coffee from './Coffee';
+import Faq from './Faq';
+import useTitle from '../../Hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home');
+
     return (
         <div className='container'>
             <div className="top-banner mb-4">
@@ -24,7 +28,7 @@ const Home = () => {
             </div>
 
             <div className='mb-4'>
-                <Services></Services>
+                <ReverseServices></ReverseServices>
                 <Link to='/services' className='d-flex justify-content-center align-items-center mt-3'>
                     <Button variant="primary">See All</Button>
                 </Link>
@@ -32,6 +36,10 @@ const Home = () => {
 
             <div className='mb-4'>
                 <Coffee></Coffee>
+            </div>
+
+            <div className='mb-4'>
+                <Faq></Faq>
             </div>
         </div>
     );

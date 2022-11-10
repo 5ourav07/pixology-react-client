@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 import Comment from '../Reviews/Comment';
 import Review from '../Reviews/Review';
 
 const ServiceDetails = () => {
+    const { user } = useContext(AuthContext);
     const { title, img, price, description } = useLoaderData();
     const { id } = useParams();
+    useTitle('Services');
 
     return (
         <div className="container">
@@ -24,13 +28,25 @@ const ServiceDetails = () => {
                         <Card.Text className='text-justify'>{description}</Card.Text>
                         <Card.Text className='text-danger fw-bolder'>Price: ${price}</Card.Text>
                     </Card.Body>
-
-                    <Card.Footer>
-                        <Comment></Comment>
-                    </Card.Footer>
                 </Card>
 
-                <Review id={id}></Review>
+                <Card>
+                    {
+                        user?.uid
+                            ?
+                            <>
+                                <Comment></Comment>
+                            </>
+                            :
+                            <>
+                                <h1>Please Login to add a comment</h1>
+                            </>
+                    }
+                </Card>
+
+                <Card>
+                    <Review id={id}></Review>
+                </Card>
             </div>
         </div>
     );

@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import useTitle from '../../Hooks/useTitle';
 import ServiceCard from './ServiceCard';
 
-const Services = () => {
+const ReverseServices = () => {
     const [services, setServices] = useState([]);
-    useTitle('Services');
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/reverse-services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -27,4 +25,4 @@ const Services = () => {
     );
 }
 
-export default Services;
+export default ReverseServices;

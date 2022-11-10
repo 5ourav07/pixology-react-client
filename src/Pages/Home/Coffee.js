@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Image } from 'react-bootstrap';
 
-function Coffee() {
+const Coffee = () => {
     return (
         <div className='container'>
             <Button className='w-100 text-center bg-danger'>
