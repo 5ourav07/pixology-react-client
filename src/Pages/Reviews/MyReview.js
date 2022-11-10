@@ -10,7 +10,7 @@ const MyReview = () => {
     useTitle('My Review');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`, {
+        fetch(`https://pixology-server.vercel.app/review?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('pixology')}`
             }
@@ -29,7 +29,7 @@ const MyReview = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this comment?');
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://pixology-server.vercel.app/review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

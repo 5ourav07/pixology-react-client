@@ -5,7 +5,7 @@ const ReverseServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reverse-services')
+        fetch('https://pixology-server.vercel.app/reverse-services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

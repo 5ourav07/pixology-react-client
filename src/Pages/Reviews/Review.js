@@ -5,7 +5,7 @@ const Review = ({ id }) => {
     const [review, setReview] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviewServices?serviceID=${id}`)
+        fetch(`https://pixology-server.vercel.app/reviewServices?serviceID=${id}`)
 
             .then(res => res.json())
             .then(data => setReview(data))

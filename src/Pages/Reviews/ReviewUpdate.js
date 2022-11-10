@@ -8,7 +8,7 @@ const ReviewUpdate = () => {
 
     const handleUpdateUser = event => {
         event.preventDefault();
-        fetch(`http://localhost:5000/review/${storedUser._id}`, {
+        fetch(`https://pixology-server.vercel.app/review/${storedUser._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
