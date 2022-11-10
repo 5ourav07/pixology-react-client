@@ -2,17 +2,23 @@ import React from 'react';
 import { Image } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
-const ReviewCard = () => {
+const ReviewCard = ({ r }) => {
+    const { serviceName, reviewerImage, reviewerName, reviewerEmail, comment } = r;
+
     return (
-        <Card>
+        <Card className='mb-3'>
             <Card.Header>
-                <div className='d-flex align-items-center'>
-                    <Image style={{ height: '30px' }} roundedCircle></Image>
-                    <p>Name</p>
+                <div className=''>
+                    <Image src={reviewerImage} style={{ height: '30px' }} roundedCircle></Image>
+                    <div>
+                        <p>{reviewerEmail}</p>
+                        <p>{reviewerName}</p>
+                    </div>
                 </div>
             </Card.Header>
             <Card.Body>
-                <Card.Text>Comment</Card.Text>
+                <Card.Text>{serviceName}</Card.Text>
+                <Card.Text>{comment}</Card.Text>
             </Card.Body>
         </Card>
     );

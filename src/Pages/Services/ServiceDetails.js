@@ -1,12 +1,13 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import Comment from '../Reviews/Comment';
 import Review from '../Reviews/Review';
 
 const ServiceDetails = () => {
     const { title, img, price, description } = useLoaderData();
+    const { id } = useParams();
 
     return (
         <div className="container">
@@ -29,7 +30,7 @@ const ServiceDetails = () => {
                     </Card.Footer>
                 </Card>
 
-                <Review></Review>
+                <Review id={id}></Review>
             </div>
         </div>
     );

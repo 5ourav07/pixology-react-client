@@ -7,6 +7,7 @@ import NewService from "../Pages/Services/NewService";
 import ServiceDetails from "../Pages/Services/ServiceDetails";
 import Services from "../Pages/Services/Services";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -28,11 +29,11 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/my-service',
-                element: <NewService></NewService>
+                element: <PrivateRoute><NewService></NewService></PrivateRoute>
             },
             {
                 path: '/review',
-                element: <MyReview></MyReview>
+                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
             },
             {
                 path: '/login',
