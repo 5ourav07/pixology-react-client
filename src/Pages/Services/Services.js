@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { AuthContext } from '../../Contexts/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
+    const { loading } = useContext(AuthContext);
     const [services, setServices] = useState([]);
     useTitle('Services');
 
@@ -11,6 +14,10 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+
+    if (loading) {
+        return <Spinner animation="border" variant="primary" />
+    }
 
     return (
         <div className='container mb-4'>

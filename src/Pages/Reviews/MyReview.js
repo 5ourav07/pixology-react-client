@@ -47,27 +47,34 @@ const MyReview = () => {
         <div className='container mb-3'>
             <h2>Total Comment: {review.length}</h2>
             <div>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Service Name</th>
-                            <th>Reviewer Name</th>
-                            <th>Reviewer Image</th>
-                            <th>Reviewer Email</th>
-                            <th>Comment</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            review.map(r => <MyReviewTable
-                                key={r._id}
-                                r={r}
-                                handleDelete={handleDelete}
-                            ></MyReviewTable>)
-                        }
-                    </tbody>
-                </Table>
+                {
+                    review.length !== 0
+                        ?
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>Service Name</th>
+                                    <th>Reviewer Name</th>
+                                    <th>Reviewer Image</th>
+                                    <th>Reviewer Email</th>
+                                    <th>Comment</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    review.map(r => <MyReviewTable
+                                        key={r._id}
+                                        r={r}
+                                        handleDelete={handleDelete}
+                                    ></MyReviewTable>)
+                                }
+                            </tbody>
+                        </Table>
+                        :
+                        <h1>No Review Found</h1>
+
+                }
             </div>
         </div>
     );
