@@ -1,5 +1,4 @@
-Pixology
-## Link: [Pixology](https://pixology-firebase.web.app/)
+## Live Link: [Pixology](https://pixology-firebase.web.app/)
 
 ## Server Link: [Pixology](https://github.com/5ourav07/pixology-react-server)
 
